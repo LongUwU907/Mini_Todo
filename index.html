@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Việc cần làm</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="todo-app">
+      <header class="page-header">
+        <h1>Việc cần làm</h1>
+        <p>Tập trung vào từng việc nhỏ mỗi ngày.</p>
+      </header>
+
+      <form class="add-form">
+        <input
+          id="task-input"
+          type="text"
+          placeholder="Nhập việc cần làm..."
+          aria-label="Nhập việc cần làm"
+        />
+        <button id="btn-add" type="button">Thêm</button>
+      </form>
+
+      <nav class="filters" aria-label="Lọc công việc">
+        <button class="active" type="button">Tất cả</button>
+        <button type="button">Chưa xong</button>
+        <button type="button">Đã xong</button>
+      </nav>
+
+      <section
+        id="task-list"
+        class="task-list"
+        aria-label="Danh sách công việc"
+      >
+        <div class="task completed">
+          <input
+            onchange="toggleTask(this)"
+            class="checkbox"
+            aria-hidden="true"
+            type="checkbox"
+          />
+          <span class="task-title">Nhiệm vụ mẫu</span>
+          <button onclick="deleteTask(this)" class="delete" type="button">
+            Xóa
+          </button>
+        </div>
+        <div class="task">
+          <input
+            onchange="toggleTask(this)"
+            class="checkbox"
+            aria-hidden="true"
+            type="checkbox"
+          />
+          <span class="task-title">Nhiệm vụ mẫu 2</span>
+          <button onclick="deleteTask(this)" class="delete" type="button">
+            Xóa
+          </button>
+        </div>
+      </section>
+
+      <footer id="summary" class="summary">Còn 0 việc chưa xong</footer>
+    </main>
+    <!-- import file script.js -->
+    <script src="script.js"></script>
+  </body>
+</html>

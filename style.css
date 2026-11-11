@@ -1,0 +1,200 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  padding: 64px 24px;
+  background: #f7f9fc;
+  color: #1f2937;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.todo-app {
+  width: min(100%, 826px);
+  margin: 0 auto;
+}
+
+.page-header h1 {
+  margin: 0;
+  font-size: 42px;
+  line-height: 1.2;
+  letter-spacing: -1px;
+}
+
+.page-header p {
+  margin: 14px 0 46px;
+  color: #7b879b;
+  font-size: 16px;
+}
+
+.add-form {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 25px;
+}
+
+.add-form input {
+  width: 276px;
+  min-width: 0;
+  height: 56px;
+  padding: 0 16px;
+  border: 1px solid #d9e1ec;
+  border-radius: 11px;
+  background: #fff;
+  color: #253044;
+  font: inherit;
+  outline: none;
+}
+
+.add-form input::placeholder {
+  color: #8792a6;
+}
+
+button {
+  border: 0;
+  font: inherit;
+  cursor: pointer;
+}
+
+.add-form button {
+  min-width: 139px;
+  height: 56px;
+  border-radius: 11px;
+  background: #2861ed;
+  color: #fff;
+  font-weight: 600;
+}
+
+.filters {
+  display: flex;
+  gap: 4px;
+  padding: 4px;
+  margin-bottom: 26px;
+  border-radius: 13px;
+  background: #eaf0f7;
+}
+
+.filters button {
+  flex: 1;
+  min-height: 48px;
+  border-radius: 9px;
+  background: transparent;
+  color: #68758b;
+}
+
+.filters .active {
+  background: #2861ed;
+  color: #fff;
+}
+
+.task-list {
+  display: grid;
+  gap: 12px;
+  padding: 60px 34px;
+  border: 1px solid #dfe6ef;
+  border-radius: 18px;
+  background: #fff;
+}
+
+.task {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  min-height: 80px;
+  padding: 14px 16px;
+  border: 1px solid #dfe6ef;
+  border-radius: 14px;
+  background: #fff;
+}
+
+input.checkbox,
+.checkbox {
+  display: grid;
+  flex: 0 0 24px;
+  width: 24px;
+  height: 24px;
+  place-items: center;
+  border: 2px solid #aab6c7;
+  border-radius: 7px;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+input.error {
+  border-color: #f44336;
+}
+
+input.checkbox.checked,
+.checkbox.check {
+  border-color: #2861ed;
+  background: #2861ed;
+}
+
+.task-title {
+  flex: 1;
+  min-width: 0;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.completed .task-title {
+  color: #7c8799;
+  text-decoration: line-through;
+}
+
+.delete {
+  flex: 0 0 auto;
+  padding: 8px 2px 8px 10px;
+  background: transparent;
+  color: #77849a;
+  font-size: 13px;
+}
+
+.summary {
+  margin-top: 25px;
+  padding-top: 20px;
+  border-top: 1px solid #dfe6ef;
+  color: #59677d;
+  font-size: 14px;
+}
+
+.completed {
+  text-decoration: line-through;
+  color: #7c8799;
+}
+@media (max-width: 600px) {
+  body {
+    padding: 40px 18px;
+  }
+
+  .page-header h1 {
+    font-size: 34px;
+  }
+
+  .page-header p {
+    margin-bottom: 32px;
+  }
+
+  .add-form input {
+    width: auto;
+    flex: 1;
+  }
+
+  .add-form button {
+    min-width: 90px;
+  }
+
+  .task-list {
+    gap: 10px;
+    padding: 18px 14px;
+  }
+
+  .task {
+    gap: 10px;
+    padding: 12px;
+  }
+}
