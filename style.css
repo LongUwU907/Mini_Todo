@@ -198,3 +198,6 @@ input.checkbox.checked,
     padding: 12px;
   }
 }
+.error {
+  border-color: #f44336;
+}
